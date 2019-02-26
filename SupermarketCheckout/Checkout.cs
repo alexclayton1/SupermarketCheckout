@@ -8,5 +8,10 @@ namespace SupermarketCheckout
         {
             return 0;
         }
+
+        public void Scan(Item item)
+        {
+            
+        }
     }
 }
