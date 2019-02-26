@@ -4,12 +4,20 @@ namespace SupermarketCheckout.Tests
 {
     public class WhenTestingCheckout
     {
-        private ICheckout CheckOut { get; set; }
+        private ICheckout Checkout { get; set; }
         
         [SetUp]
         public void SetUp()
         {
-            CheckOut = new Checkout();
+            Checkout = new Checkout();
+        }
+
+        [Test]
+        public void WhenNoItemsAreScannedTotalPriceIsZero()
+        {
+            int total = Checkout.GetTotalPrice();
+            
+            Assert.That(total, Is.EqualTo(0));
         }
     }
 }
