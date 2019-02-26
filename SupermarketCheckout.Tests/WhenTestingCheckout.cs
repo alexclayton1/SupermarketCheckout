@@ -36,5 +36,17 @@ namespace SupermarketCheckout.Tests
             
             Assert.That(total, Is.EqualTo(ItemA.Price));
         }
+
+        [Test]
+        public void WhenSpecialPriceIsUsedTotalPriceIsCorrect()
+        {
+            Checkout.Scan(ItemA);
+            Checkout.Scan(ItemA);
+            Checkout.Scan(ItemA);
+
+            int total = Checkout.GetTotalPrice();
+            
+            Assert.That(total, Is.EqualTo(130));
+        }
     }
 }
