@@ -1,0 +1,15 @@
+.DS_Store
+idea/*
+
+**/.idea/**/*
+**/obj/**/*
+**/bin/**/*
+**/wwwroot/*
+**/node_modules/
+**/coverage
+SalesAreaUI.Backend/build/output/*
+output/
+temp/
+SalesAreaUI.Frontend/src/js/app-config.js
+SalesAreaUI.Frontend/tests/integration/videos/*
+SalesAreaUI.Frontend/tests/integration/screenshots/*
