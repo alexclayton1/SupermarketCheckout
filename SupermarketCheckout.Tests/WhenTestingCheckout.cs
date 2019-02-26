@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using NUnit.Framework;
+using SupermarketCheckout.Models;
 
 namespace SupermarketCheckout.Tests
 {
@@ -6,11 +8,28 @@ namespace SupermarketCheckout.Tests
     {
         private ICheckout Checkout { get; set; }
         private Item ItemA { get; set; }
+        private List<SpecialPrice> SpecialPrices { get; set; }
         
         [SetUp]
         public void SetUp()
         {
-            Checkout = new Checkout();
+            SpecialPrices = new List<SpecialPrice>
+            {
+                new SpecialPrice
+                {
+                    Name = "A",
+                    Quantity = 3,
+                    Price = 130
+                },
+                new SpecialPrice
+                {
+                    Name = "B",
+                    Quantity = 2,
+                    Price = 45
+                }
+            };
+            
+            Checkout = new Checkout(SpecialPrices);
 
             ItemA = new Item
             {
