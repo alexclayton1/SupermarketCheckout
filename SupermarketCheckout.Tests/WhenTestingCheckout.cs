@@ -4,12 +4,12 @@ namespace SupermarketCheckout.Tests
 {
     public class WhenTestingCheckout
     {
-        private ICheckOut CheckOut { get; set; }
+        private ICheckout CheckOut { get; set; }
         
         [SetUp]
         public void SetUp()
         {
-            CheckOut = new CheckOut();
+            CheckOut = new Checkout();
         }
     }
 }
