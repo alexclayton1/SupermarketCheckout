@@ -6,7 +6,7 @@ namespace SupermarketCheckout
     {
         public int GetTotalPrice()
         {
-            throw new NotImplementedException();
+            return 0;
         }
     }
 }
